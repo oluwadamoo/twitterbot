@@ -5,7 +5,7 @@ from datetime import datetime
 
 
 # Created a list to append all tweet attributes(data)
-attributes_container = []
+# attributes_container = []
 my_doc = docx.Document()
 
 spool_type = input("What parameter do you want to spool by?\n (Enter 1 for 'username' and Enter 2 for 'Topic'): ")
@@ -47,7 +47,7 @@ if search_query:
         my_doc.add_paragraph(str(tweet.date))
         my_doc.add_paragraph(tweet.rawContent)
         my_doc.add_paragraph("\n")
-        attributes_container.append(tweet.rawContent)
+        # attributes_container.append(tweet.rawContent)
 else:
     print('You never get time')
 my_doc.save("results-{}.docx".format(int(ts)))
